@@ -1,0 +1,19 @@
+
+h1 {
+    background-color: #C7926A;
+    text-align: center;
+}
+body {
+    background-color: #C7926A;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #C37861;
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
