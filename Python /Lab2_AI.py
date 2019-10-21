@@ -1,3 +1,4 @@
+import re
 """
 We want to make an unbeatable Tic-Tac-Toe game, with an AI that will never lose.
 For that to happen, we will be making use of Functions/Methods, Lists, and If/Else statements.
@@ -16,12 +17,14 @@ Each "cell" should have a default value of an underscore, '_'.
 If you need help consult the notes from Week4.py.
 """
 
+
 def make_board():
     row1 = ['_', '_', '_']
     row2 = ['_', '_', '_']
     row3 = ['_', '_', '_']
-    board = [row, row2 , row3]
+    board = [row1, row2, row3]
     return board
+
 
 """
 Part 2: Printing the Game Board
@@ -33,11 +36,18 @@ Note that this function takes in a board as its parameter.
 Bonus EC: Figure out how to clear the playing field before the board is printed.
 Hint, it may be wise to 'import sys', but what from sys can we use???
 """
+
+
 def print_board(board):
-    print(f'{board[0][0]} {board[0][1]} {board[0][2]}')
-    print(f'{board[1][0]} {board[1][1]} {board[1][2]}')
-    print(f'{board[2][0]} {board[2][1]} {board[2][2]}')
-    
+    print(f'''
+    {board[0][0]} | {board[0][1]} | {board[0][2]}
+    -----------
+    {board[1][0]} | {board[1][1]} | {board[1][2]}
+    -----------
+    {board[2][0]} | {board[2][1]} | {board[2][2]}
+    ''')
+
+
 """
 Part 3: Making the move for the player
 The game doesn't really work unless the player actually plays the game.
@@ -50,13 +60,24 @@ on the board. Just set it to the value PLAYER, which is 'X'.
 Bonus EC: Figure out a way checking whether or not the user made a valid choice.
 """
 
+
 def make_move(board):
-    move = input("Enter x,y pair for an available position")
+
+    pattern = '[0-2],[0-2]'
+    while True:
+        move = input("Enter x,y pair for an available position")
+        if len(move) == 3 and re.match(pattern,move):
+            row, col = move.split(',')
+            board[int(row)][int(col)] = PLAYER
+            break
+        else:
+            print("Invalid move entry, must be x,y ")
+
     """ figure out how to validate that move is correct
         then split the input on the comma
         then see if the spot has already been taken on the board, if so, send message back to user to make anther call
         else add an x to the board
-    """ 
+    """
 
 
 """
@@ -67,39 +88,29 @@ Using if/elif/else statments check whether or not that player has won the game a
 'Else, return False'
 Note that there are a total of 8 potential ways of winning the game of Tic-Tac-Toe.
 """
-def winning(current_player,board):
-    """
-       current_player will either be an x or o
 
-       look at the board to see if one of the 8 possible winning combinations exists
-       aka xxx
-       or  x
-             x
-               x
-       or    x
-            x
-           x  
-       or x
-          x
-          x           
-    """
-    if board[0,0] = current_player and 
-       board[0,1] = current_player and 
-       board[0,2] = current_player
-       return True
-    elsif board[1,0] = current_player and 
-          board[1,1] = current_player and 
-          board[1,2] = current_player
-       return True   
 
+def winning(player, board):
+    if ((board[0][0] == board[0][1] and board[0][1] == board[0][2] and board[0][0] == player) or
+            (board[1][0] == board[1][1] and board[1][1] == board[1][2] and board[1][0] == player) or
+            (board[2][0] == board[2][1] and board[2][1] == board[2][2] and board[2][0] == player) or
+            (board[0][0] == board[1][0] and board[1][0] == board[2][0] and board[0][0] == player) or
+            (board[0][1] == board[1][1] and board[1][1] == board[2][1] and board[0][1] == player) or
+            (board[0][2] == board[1][2] and board[1][2] == board[2][2] and board[0][2] == player) or
+            (board[0][0] == board[1][1] and board[1][1] == board[2][2] and board[0][0] == player) or
+            (board[2][0] == board[1][1] and board[1][1] == board[0][2] and board[2][0] == player)):
+        return True
     else:
         return False
 
-##############################################################
+    ##############################################################
+
+
 # Test Code
 ##############################################################
 PLAYER = 'X'
 AI = 'O'
+
 
 def print_help():
     print("""
@@ -120,6 +131,7 @@ The board is represented like so:
          7 | 8 | 9 
     """)
 
+
 def evaluate(board):
     """
     Heuristic function to evaluate the current state of the game
@@ -131,7 +143,8 @@ def evaluate(board):
     elif winning(PLAYER, board):
         return -1
     return 0
-    
+
+
 def available_moves(board):
     """
     Gets a list of available moves left
@@ -145,6 +158,7 @@ def available_moves(board):
                 cells.append([x, y])
     return cells
 
+
 def won_state(board):
     """
     Returns whether or not the game is in a won state.
@@ -152,6 +166,7 @@ def won_state(board):
     :return: True if the game is won
     """
     return winning(PLAYER, board) or winning(AI, board)
+
 
 def swap_player(player):
     """
@@ -163,6 +178,7 @@ def swap_player(player):
         return PLAYER
 
     return AI
+
 
 def minimax(board, depth, player):
     """
@@ -183,9 +199,9 @@ def minimax(board, depth, player):
         score = evaluate(board)
         return [-1, -1, score]
 
-    for x,y in moves:
+    for x, y in moves:
         board[x][y] = player
-        score = minimax(board, depth-1, swap_player(player))
+        score = minimax(board, depth - 1, swap_player(player))
         board[x][y] = '_'
 
         score[0], score[1] = x, y
@@ -202,21 +218,22 @@ def minimax(board, depth, player):
 if __name__ == "__main__":
     from math import inf as infinity
     import itertools
+
     # print_help()
-    
+
     current_player = PLAYER
     board = make_board()
-    
+
     while len(available_moves(board)):
         print_board(board)
-        
+
         if current_player == PLAYER:
             make_move(board)
         else:
             depth = len(available_moves(board))
             best_move = minimax(board, depth, AI)
             board[best_move[0]][best_move[1]] = AI
-        
+
         # Check for winner
         if winning(current_player, board):
             print_board(board)
@@ -225,7 +242,5 @@ if __name__ == "__main__":
             break
         elif not len(available_moves(board)):
             print('Draw!')
-        
+
         current_player = swap_player(current_player)
-
-

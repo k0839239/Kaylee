@@ -4,32 +4,37 @@
 <style>
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: #C8A669;
-  padding: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  margin: auto;
+  max-width: 900px;
+  padding: 20px;
+  text-align: center;
 }
 .grid-item {
-  background-color: #C8A669
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
   font-size: 30px;
   text-align: center;
 }
 .Grid-options {
-  background-color: #C8A669
   border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
   font-size: 15px;
   text-align: center;
   font-family: 'Chilanka', cursive;
 }
+body {
+  background-color: #DEF2Ff;
+}
 </style>
 </head>
 <body>
+    <div w3-include-html="navigation.html"></div>
+    <div w3-include-html="banner.html"></div>
+
 
 <h1>The Menu</h1>
 
-<link rel="stylesheet" type="text/css" href="menustyle.css">
 <link rel="stylesheet" type="text/css" href="menustyle.css">
 <p> We are a Keto-Friendly restaurant so everyhting on our menu is catered to the Keto Diet!</p>
 <p> All meals are served all day.</p>
@@ -37,68 +42,69 @@
 
 
 <div class="grid-container">
-  <div class="grid-item"><p><b>Appetizers</b></p></div>
-  <div class="grid-item"><p><b>Meals</b></p></div>
-  <div class="grid-item"><p><b>Drinks</b></p></div>
-  <div class="Grid-options"> <h3>Bacon Cauliflower “Mac” ‘N’ Cheese </h3>
-    <p>Our cheesy blend with bacon on top all stays keto friendly with cauliflower
-    </p>
-  </div>
-  <div class="Grid-options"> <h3>Keto-Friendly Flatbread</h3> 
-    <p>your choice of topping added to our perfected keto-friendly flatbread crust 
+<div class="grid-item"><p><b>Appetizers</b></p>
+    <div class="Grid-options"> <h3>Bacon Cauliflower “Mac” ‘N’ Cheese </h3>
+      <p>Our cheesy blend with bacon on top all stays keto friendly with cauliflower
       </p>
-  </div>
-  <div class="Grid-options"> <h3>Tea</h3>
+      <h3>BBQ Bacon Ice Tray Meatballs</h3>
+      <p>handcrafted meatballs covered in smokey BBQ bacon
+      </p>
+      <h3>Baked Avocado Eggs</h3>
+      <p>Avocado outside egg center topped with your choice of cheese, bacon bits, or cherry tomatoes </p>
+      <h3>Carnitas Salad</h3>
+      <p>crisp lettuce topped with pork, sour cream, onions and cilantro 
+      </p>
+      <h3>Cool Ranch Zucchini Chips</h3>
+      <p>homemade zucchini chips with a potent ranch flavor
+      </p>
+    </div>
+    </div>
+  
+  
+  <div class="grid-item"><p><b>Meals</b></p>
+    <div class="Grid-options"> 
+      <h3>Keto-Friendly Flatbread</h3> 
+      <p>your choice of topping added to our perfected keto-friendly flatbread crust 
+      </p>
+      <h3>Spinach & Artichoke Chicken Rolls</h3>
+      <p> Yummy chicken outside with our blend of artichoke and cheese on the inside
+      </p>
+      <h3>Fajita Hasselback Chicken</h3>
+      <p>Chicken with a mexican flare of salsa and fajita mix
+      </p>
+      <h3>Cheddar-Crusted & Bacon Broccoli Quiche</h3>
+      <p>Our Keto-friendly cheesy crust topped with cheese, broccoli and bacon mixture
+      </p>
+      <h3>Maple Hazelnut Squash And Sausage Stuffing</h3>
+      <p>Our squash and stuffing mixture with hints of sweet maple and hazelnut
+        </p>
+    </div>
+    </div>
+
+  <div class="grid-item"><p><b>Drinks</b></p>
+    <div class="Grid-options"> <h3>Tea</h3>
     <p>homeade iced tea steeped for 24 hours served hot or iced </p>
-  </div>
-  <div class="Grid-options"> <h3>BBQ Bacon Ice Tray Meatballs</h3>
-    <p>handcrafted meatballs covered in smokey BBQ bacon
-    </p>
-  </div>
-  <div class="Grid-options"> <h3>Spinach & Artichoke Chicken Rolls</h3>
-    <p> Yummy chicken outside with our blend of artichoke and cheese on the inside
-      </p>
-  </div>  
-  <div class="Grid-options"> <h3>Seltzer</h3>
+    <h3>Seltzer</h3>
     <p>sparkling water add lemon, lime, or pineapple flavor</p>
-  </div>
-  <div class="Grid-options"> <h3>Baked Avocado Eggs</h3>
-    <p>Avocado outside egg center topped with your choice of cheese, bacon bits, or cherry tomatoes </p>
-  </div>
-  <div class="Grid-options"> <h3>Fajita Hasselback Chicken</h3>
-    <p>Chicken with a mexican flare of salsa and fajita mix
-      </p>
-  </div>  
-  <div class="Grid-options"><h3>Nut Milk</h3>
+    <h3>Nut Milk</h3>
     <p>your chocie of cashew, almond or macadamia nut milk </p>
-  </div>  
-  <div class="Grid-options"><h3>Carnitas Salad</h3>
-    <p>crisp lettuce topped with pork, sour cream, onions and cilantro 
-      </p>
-  </div>
-  <div class="Grid-options"><h3>Cheddar-Crusted & Bacon Broccoli Quiche</h3>
-    <p>Our Keto-friendly cheesy crust topped with cheese, broccoli and bacon mixture
-      </p>
-  </div>
-  <div class="Grid-options"><h3>Plain Coffee (ask for special keto creamer)</h3>
+    <h3>Plain Coffee (ask for special keto creamer)</h3>
     <p> our own blend of coffee brewed fresh everyday</p>
-  </div>
-  <div class="Grid-options"><h3>Cool Ranch Zucchini Chips</h3>
-    <p>homemade zucchini chips with a potent ranch flavor
-      </p>
-  </div>
-  <div class="Grid-options"><h3>Maple Hazelnut Squash And Sausage Stuffing</h3>
-    <p>Our squash and stuffing mixture with hints of sweet maple and hazelnut
-      </p>
-  </div>
-  <div class="Grid-options"><h3>Diet coke products</h3>
+    <h3>Diet coke products</h3>
     <p>bubbly no carb diet coke</p>
   </div>
-</div>
+  </div>
+  </div>
+  
 
+<div>
 <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/135759.jpg?output-quality=100&resize=900:*" width="300" height="250">
 <img src="https://s3.amazonaws.com/video-api-prod/assets/9c1bb662687340a9915714db28d46089/Square_THUMB2.jpg" width="300" height="250">
 <img src="https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/159294.jpg" width="300" height="250">
+</div>
+<script type="text/javascript" src="include.js"></script>
+<script type="text/javascript" src="burgers.js"></script>
+<script> includeHTML();</script>
 
 </body>
 </html>

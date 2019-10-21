@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>  
+<html> 
+    
+    <div class="burger burger-arrow">
+        <div class="burger-lines"></div>
+      </div>
     <head>
         <title>Ketolicious</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
-        <h1> <font face="courier" color="black">The Ketolicious Meatery</font></h1>
+        <div w3-include-html="navigation.html"></div>
+        <div w3-include-html="banner.html"></div>
         <p><font face="courier" size="6" color= "black"> About Us:</font></p>
         <p><font face= "courier" size="3" color="black"> Ketolicious is designed to attract those following the Keto Diet as well as others who aren't. Ketolicious features a Keto-friendly menu but also allows substitutions for people who don't follow the keto diet. This is a family-friendly restaurant that allows for a memorable dining experience.</font></p>
         <p><font face= "courier" size="6" color="black"> Reviews:</font></p>
@@ -21,6 +26,9 @@
         <p>Address: 351 Meater Lane</p>
         <p>North Liberty, IA 52317 </p>
     </footer>
+    <script type="text/javascript" src="include.js"></script>
+    <script type="text/javascript" src="burgers.js"></script>
+    <script> includeHTML();</script>
     </body>
    
 </html>
