@@ -7,7 +7,7 @@ body {
     background-color: #C7926A;
 }
 footer {
-    position: fixed;
+    position: sticky;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -15,5 +15,11 @@ footer {
     color: white;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+
+
+}
+@media(min-resolution:200dpi){
+ *{font-size: 1em !important;
+}   
 }
 

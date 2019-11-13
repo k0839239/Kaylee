@@ -1,4 +1,4 @@
-function includeHTML() {
+async function includeHTML() {
     var z, i, elmnt, file, xhttp;
     /* Loop through a collection of all HTML elements: */
     z = document.getElementsByTagName("*");
@@ -18,7 +18,7 @@ function includeHTML() {
                     includeHTML();
                 }
             }
-            xhttp.open("GET", file, true);
+            xhttp.open("GET", file, false);
             xhttp.send();
             /* Exit the function: */
             return;

@@ -1,9 +1,18 @@
 Body{  background-color: #FFAC5E
-margin:auto;}
+margin:auto;
+}
 h1 {
     background-color: #FFAC5E;
 }
 * {
     text-align: center;
 }
-h3{ background-color: #FFAC5E }
+h3{ background-color: #FFAC5E 
+}
+#cartlist {
+    display: none;
+}
+#cartdisplay {
+width: 100px;
+height: 100px;
+}

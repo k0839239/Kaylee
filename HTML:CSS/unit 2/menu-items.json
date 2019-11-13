@@ -1,0 +1,89 @@
+{
+    "menu": [{
+            "name": "Appetizers",
+            "items": [{
+                    "name": "Bacon Cauliflower \"Mac 'N' Cheese\"",
+                    "description": "our cheesy blend with bacon on top all stays keto friendly with cauliflower",
+                    "price": 10.00
+                }, {
+                    "name": "BBQ Bacon Ice Tray Meatballs",
+                    "description": "handcrafted meatballs covered in smokey BBQ bacon",
+                    "price": 12.00
+                },
+                {
+                    "name": "Baked Avocado Eggs",
+                    "description": "avocado outside egg center topped with your choice of cheese, bacon bits, or cherry tomatoes",
+                    "price": 9.00
+                },
+                {
+                    "name": "Carnitas Salad",
+                    "description": "crisp lettuce topped with pork, sour cream, onions and cilantro ",
+                    "price": 11.00
+                },
+                {
+                    "name": "Cool Ranch Zucchini Chips",
+                    "description": "homemade zucchini chips with a potent ranch flavor",
+                    "price": 7.00
+                }
+            ]
+        }, {
+
+            "name": "Meals",
+            "items": [{
+                    "name": "Keto-Friendly Flatbread",
+                    "description": "your choice of topping added to our perfected keto-friendly flatbread crust",
+                    "price": 13.00
+                }, {
+                    "name": "Spinach & Artichoke Chicken Rolls",
+                    "description": "yummy chicken outside with our blend of artichoke and cheese on the inside",
+                    "price": 14.00
+                },
+                {
+                    "name": "Fajita Hasselback Chicken",
+                    "description": "chicken with a mexican flare of salsa and fajita mix",
+                    "price": 13.00
+                },
+                {
+                    "name": "cheddar-Crusted & Bacon Broccoli Quiche",
+                    "description": "our Keto-friendly cheesy crust topped with cheese, broccoli and bacon mixture",
+                    "price": 12.00
+                },
+                {
+                    "name": "Maple Hazelnut Squash And Sausage Stuffing",
+                    "description": "our squash and stuffing mixture with hints of sweet maple and hazelnut",
+                    "price": 13.00
+                }
+            ]
+        },
+        {
+
+            "name": "Drinks",
+            "items": [{
+                    "name": "Tea",
+                    "description": "homeade iced tea steeped for 24 hours served hot or iced ",
+                    "price": 3.00
+                }, {
+                    "name": "Seltzer",
+                    "description": "sparkling water add lemon, lime, or pineapple flavor",
+                    "price": 2.00
+                },
+                {
+                    "name": "Nut Milk",
+                    "description": "your chocie of cashew, almond or macadamia nut milk",
+                    "price": 3.00
+                },
+                {
+                    "name": "Plain Coffee (ask for special keto creamer)",
+                    "description": "our own blend of coffee brewed fresh everyday",
+                    "price": 3.00
+                },
+                {
+                    "name": "Diet coke products",
+                    "description": "bubbly no carb diet coke",
+                    "price": 3.00
+                }
+
+            ]
+        }
+    ]
+}
