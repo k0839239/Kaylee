@@ -1,0 +1,53 @@
+<html>
+
+<link rel="stylesheet" type="text/css" href="contact.css">
+
+<body>
+    <div w3-include-html="navigation.html"></div>
+    <div w3-include-html="banner.html"></div>
+    <h2>Contact Us!</h2>
+    <p>Message us about any concerns or comments you may have about our restuarant.</p>
+
+    <form action="/action_page.php">
+
+        <div class="full">
+            <div class="column">
+                <fieldset>
+                    <legend>Personal information:</legend>
+                    Name:<br>
+                    <input type="text" name="name">
+                    <br> Reason for Message:<br>
+                    <select name="reasons">
+                    <option value="comment">Comment</option>
+                    <option value="complaint">Complaint</option>
+                    <option value="otherquestions">Other Questions</option>
+                    <option value="concerns">Concerns</option>
+                    </select>
+                    <br> Telephone Number: <br>
+                    <input type="tel" name="phone-number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    <br> Email: <br>
+                    <input type="email" name="email">
+
+                </fieldset>
+            </div>
+
+            <div class="column">
+                <fieldset>
+                    <br> Message <br>
+                    <textarea name="message" rows="10" cols="30">Write a Quick Message for Us to Read</textarea>
+                    <br><br>
+                    <input type="submit" value="Submit">
+                    <input type="reset">
+                </fieldset>
+            </div>
+
+        </div>
+    </form>
+    <script type="text/javascript" src="include.js"></script>
+    <script type="text/javascript" src="burgers.js"></script>
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>
